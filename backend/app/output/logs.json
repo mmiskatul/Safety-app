@@ -36,5 +36,71 @@
             "Boots": 2
         },
         "timestamp": "2026-02-08T23:06:19.328880"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\image1114_detected.jpg",
+        "counts": {
+            "Person": 1,
+            "Boots": 2,
+            "Helmet": 1,
+            "Vest": 1
+        },
+        "timestamp": "2026-02-09T00:13:06.681807"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\camera-input-2026-02-08T18_20_42.659Z_detected.jpg",
+        "counts": {},
+        "timestamp": "2026-02-09T00:20:42.880429"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\camera-input-2026-02-08T19_16_31.296Z_detected.jpg",
+        "counts": {},
+        "timestamp": "2026-02-09T01:16:31.763801"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\image1007_detected.jpg",
+        "counts": {
+            "Vest": 1,
+            "Person": 1,
+            "Helmet": 1,
+            "Boots": 2
+        },
+        "timestamp": "2026-02-09T01:16:45.290185"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\image392_detected.jpg",
+        "counts": {
+            "person": 1
+        },
+        "timestamp": "2026-02-09T02:33:26.478287"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\image238_detected.jpg",
+        "counts": {
+            "person": 1
+        },
+        "timestamp": "2026-02-09T02:34:09.908989"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\camera-input-2026-02-08T21_42_50.386Z_detected.jpg",
+        "counts": {},
+        "timestamp": "2026-02-09T03:42:50.845197"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\image164_detected.jpg",
+        "counts": {
+            "person": 1,
+            "laptop": 1,
+            "tie": 1
+        },
+        "timestamp": "2026-02-09T04:11:01.540833"
     }
 ]

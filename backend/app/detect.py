@@ -4,10 +4,10 @@ from ultralytics import YOLO
 from collections import Counter
 import numpy as np
 
-model = YOLO("../model/best.pt")
+model = YOLO("../model/yolo11n (1).pt")
 
 if not model.names:
-    model.names = {0: "Mask", 1: "Helmet", 2: "Vest", 3: "Boots", 4: "Person"}
+    model.names = {0: "Hardhat", 1: "Mask", 2: "NO-Hardhat", 3: "NO-Mask", 4: "NO-Safety Vest", 5: "Person",7:"Safety Vest"}
 
 class_names = model.names
 

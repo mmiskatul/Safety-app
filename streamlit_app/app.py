@@ -20,6 +20,19 @@ with st.sidebar:
     st.caption("FastAPI should be running on this URL.")
     socket_url = st.text_input("Socket URL", value="http://127.0.0.1:8001")
     st.caption("Start the socket server for live detection.")
+    display_width = st.slider("Display width (px)", min_value=320, max_value=1280, value=640, step=10)
+    display_height = st.slider("Display height (px)", min_value=240, max_value=960, value=480, step=10)
+
+st.markdown(
+    f"""
+    <style>
+      video {{ width: {display_width}px !important; height: {display_height}px !important; }}
+      img {{ max-width: {display_width}px !important; }}
+      .stVideo {{ width: {display_width}px !important; }}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 modes = [
     "Live Detection",
@@ -34,8 +47,12 @@ mode = st.selectbox("Mode", modes, index=0)
 
 @st.cache_resource
 def get_socket_client(url):
-    sio = socketio.Client(reconnection=True, transports=["polling"])
-    sio.connect(url, wait_timeout=5)
+    sio = socketio.Client(reconnection=True)
+    socketio_path = "socket.io"
+    base_url = url.rstrip("/")
+    if base_url.endswith("/socket.io"):
+        base_url = base_url[: -len("/socket.io")]
+    sio.connect(base_url, wait_timeout=5, socketio_path=socketio_path)
     return sio
 
 
@@ -133,6 +150,11 @@ if mode == "Live Detection":
             media_stream_constraints={"video": True, "audio": False},
         )
 
+        if ctx.state == "FAILED":
+            st.error("Camera not found or permission denied. Check your camera and browser permissions.")
+        elif ctx.state == "STOPPED":
+            st.info("Camera is stopped. Click Start to begin live detection.")
+
         if ctx.video_processor:
             st.subheader("Latest counts")
             st.json(ctx.video_processor.counts or {})
@@ -151,7 +173,7 @@ elif mode == "Camera Snapshot":
                 if output_path:
                     try:
                         img_bytes = download_bytes(output_path)
-                        st.image(img_bytes, caption="Detected image", use_container_width=True)
+                        st.image(img_bytes, caption="Detected image", width=display_width)
                     except requests.RequestException as exc:
                         st.warning(f"Could not download result image: {exc}")
                 render_detection_results(result)
@@ -170,7 +192,7 @@ elif mode == "Image Upload":
                 if output_path:
                     try:
                         img_bytes = download_bytes(output_path)
-                        st.image(img_bytes, caption="Detected image", use_container_width=True)
+                        st.image(img_bytes, caption="Detected image", width=display_width)
                     except requests.RequestException as exc:
                         st.warning(f"Could not download result image: {exc}")
                 render_detection_results(result)

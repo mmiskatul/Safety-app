@@ -11,7 +11,7 @@ cd backend
 python -m uvicorn app.main:app --reload
 ```
 
-Optional realtime socket server (not used by Streamlit):
+Realtime socket server (required for Live Detection mode):
 
 ```powershell
 cd backend
@@ -27,4 +27,4 @@ pip install -r streamlit_app/requirements.txt
 streamlit run streamlit_app/app.py
 ```
 
-The Streamlit app expects the FastAPI backend at `http://127.0.0.1:8000`. You can change it in the sidebar.
+The Streamlit app expects the FastAPI backend at `http://127.0.0.1:8000` and the socket server at `http://127.0.0.1:8001`. You can change both in the sidebar.
