@@ -1,0 +1,6 @@
+﻿streamlit
+requests
+streamlit-webrtc
+python-socketio
+av
+pillow

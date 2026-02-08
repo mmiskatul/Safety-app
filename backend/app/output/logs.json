@@ -1,0 +1,40 @@
+[
+    {
+        "type": "prevention",
+        "photo": "app/output\\image550_detected.jpg",
+        "counts": {
+            "Helmet": 1,
+            "Person": 2
+        },
+        "timestamp": "2026-02-08T23:03:55.215376"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\image541_detected.jpg",
+        "counts": {
+            "Helmet": 1,
+            "Vest": 1,
+            "Person": 1
+        },
+        "timestamp": "2026-02-08T23:04:11.732527"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\image1270_detected.jpg",
+        "counts": {
+            "Person": 2
+        },
+        "timestamp": "2026-02-08T23:05:54.918481"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\image1007_detected.jpg",
+        "counts": {
+            "Vest": 1,
+            "Person": 1,
+            "Helmet": 1,
+            "Boots": 2
+        },
+        "timestamp": "2026-02-08T23:06:19.328880"
+    }
+]
