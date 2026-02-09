@@ -102,5 +102,45 @@
             "tie": 1
         },
         "timestamp": "2026-02-09T04:11:01.540833"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\image355_detected.jpg",
+        "counts": {
+            "Helmet": 1,
+            "Boots": 2,
+            "Vest": 1,
+            "Person": 1
+        },
+        "timestamp": "2026-02-09T05:45:36.423043"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\image360_detected.jpg",
+        "counts": {
+            "Helmet": 1,
+            "Vest": 1
+        },
+        "timestamp": "2026-02-09T05:50:44.295906"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\WhatsApp Image 2026-02-09 at 5.52.06 AM_detected.jpg",
+        "counts": {
+            "Helmet": 1,
+            "Glove": 1,
+            "Person": 2
+        },
+        "timestamp": "2026-02-09T05:53:07.153078"
+    },
+    {
+        "type": "prevention",
+        "photo": "app/output\\image666_detected.jpg",
+        "counts": {
+            "Helmet": 1,
+            "Person": 2,
+            "Vest": 1
+        },
+        "timestamp": "2026-02-09T05:54:34.664281"
     }
 ]

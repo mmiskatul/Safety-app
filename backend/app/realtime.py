@@ -6,6 +6,7 @@ import numpy as np
 from .detect import draw_boxes, class_names
 
 model = YOLO("../model/best.pt")
+# model = YOLO("../model/yolo11n (1).pt")
 
 def process_frame(frame_b64):
     img_bytes = base64.b64decode(frame_b64)
